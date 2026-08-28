@@ -1,0 +1,249 @@
+section {
+  scroll-margin-top: 100px; 
+}
+
+.Home {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #111111;
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  /* GRID PRINCIPAL: Divide la vista inicial en 2 columnas */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* --- SECCIONES GRID --- */
+.Perfil {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Descripcion {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 2px solid #000000;
+  padding-left: 3rem;
+}
+
+/* Las siguientes secciones ocupan todo el ancho */
+.Tecnologias, .HabilidadesCertificaciones, .ProyectosEducacion {
+  grid-column: 1 / -1;
+  margin-top: 3rem;
+  border-top: 2px solid #000000;
+  padding-top: 4rem;
+}
+
+/* --- PERFIL (Nombre Grande) --- */
+.Nombre h1 {
+  font-size: 4.5rem;
+  line-height: 0.95;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-weight: 900;
+}
+
+.Nombre h2 {
+  font-size: 1.5rem;
+  color: #555555;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.Semestre {
+  font-family: 'Courier New', Courier, monospace;
+  background: #000000;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.CardInfo {
+  margin-top: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* --- DESCRIPCION (Sobre Mí) --- */
+.Descripcion h3 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.Descripcion p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 2.5rem;
+}
+
+.Descripcion .BotonDescargarCV {
+  margin-top: auto;
+}
+
+.Descripcion .btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.Descripcion .btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* --- ESTILOS COMPARTIDOS SECCIONES --- */
+.Tecnologias h3, .HabilidadesCertificaciones h3, .ProyectosEducacion h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+/* --- TECNOLOGIAS --- */
+.CuadroTecnologias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.TechGrupo h4 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.TechGrupo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.TechGrupo li {
+  margin-bottom: 0.75rem;
+  color: #111111;
+  font-weight: 600;
+}
+
+.TechGrupo li::before {
+  content: "> ";
+  color: #000000;
+  font-weight: bold;
+}
+
+/* --- HABILIDADES & CERTIFICACIONES --- */
+.HabilidadesCertificaciones {
+  /* Sobreescribe para usar grid interno */
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 4rem;
+}
+
+.HabilidadesCertificaciones h3 {
+  margin-bottom: 2rem;
+}
+
+.ColumnaHabilidades ul, .ColumnaCertificaciones ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ColumnaHabilidades li, .ColumnaCertificaciones li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  color: #111111;
+}
+
+.ColumnaHabilidades li::before, .ColumnaCertificaciones li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-size: 0.8rem;
+  top: 5px;
+}
+
+/* --- PROYECTOS & EDUCACION --- */
+.ProyectosEducacion {
+  /* Sobreescribe para usar grid interno */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+
+.EducacionItem h4 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.Institucion {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.Periodo {
+  font-family: 'Courier New', Courier, monospace;
+  color: #666666;
+  font-size: 0.95rem;
+}
+
+.BloqueProyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ProyectoCard {
+  border: 2px solid #000000;
+  padding: 2rem;
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ProyectoCard:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.ProyectoCard h4 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.ProyectoCard p {
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1.05rem;
+}

@@ -1,0 +1,50 @@
+.Contacto {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top: 1px solid #333333;
+}
+
+.FooterContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.FooterNombre {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  font-weight: 900;
+}
+
+.FooterDatos {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.FooterDatos li {
+  font-size: 1rem;
+  color: #aaaaaa;
+}
+
+.FooterDatos a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+  margin-left: 0.5rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.FooterDatos a:hover {
+  color: #cccccc;
+  border-color: #cccccc;
+}
