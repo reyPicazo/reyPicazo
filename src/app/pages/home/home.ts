@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class Home {
   descargarCV(): void {
     const link = document.createElement('a');
-    link.href = 'Rey_Emmanuel_Picazo_Perez_CV.pdf';
+    link.href = '/Rey_Emmanuel_Picazo_Perez_CV.pdf';
     link.download = 'Rey_Emmanuel_Picazo_Perez_CV.pdf';
     link.click();
   }
